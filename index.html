@@ -15,16 +15,20 @@
       <button class="bg-green-500 w-16 h-16" onclick="onIncrementClick()">+</button>
       <button class="bg-red-500 w-16 h-16" onclick="onDecrementClick()">-</button>
     </div>
-    <div class="p-5">
+    <div class="p-5 flex flex-col items-center">
       <div>
         <p>Input increment/decrement value</p>
         <input id="inc-and-dec-input" type="number" class="border">
-        <button id="inc-and-dec-button" class="border">Save to local storage</button>
+        <input id="limit-input" type="number" class="border">
       </div>
       <div>
-        <p>Input boom limit</p>
-        <input id="limit-input" type="number" class="border">
-        <button id="limit-button" class="border">Load from local storage</button>
+        <button id="save-to-local" onclick="saveToLocalStorage()" class="border">Apply and save to local
+          storage</button>
+        <button id="load-from-local" onclick="getItemFromLocalStorage()" class="border">Load from local storage</button>
+      </div>
+      <div>
+        <p id="current-input-number"></p>
+        <p id="current-limit-number"></p>
       </div>
     </div>
     <ul id="boom-list" class="bg-purple-600 text-9xl text-white m-3">
