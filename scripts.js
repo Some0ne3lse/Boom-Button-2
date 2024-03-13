@@ -30,8 +30,6 @@ const getItemFromLocalStorage = () => {
   clickNumber = 0;
   const savedInput = +localStorage.getItem('Input Number', inputNumber);
   const savedLimit = +localStorage.getItem('Limit number', limitNumber);
-  console.log('input is', savedInput)
-  console.log('limit is', savedLimit)
   inputNumber = savedInput;
   limitNumber = savedLimit;
   inputNumberTag.textContent = (`Current increment/decrement value is ${inputNumber}`);
